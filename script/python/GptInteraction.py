@@ -37,6 +37,6 @@ data = {
 print(headers)
 print(data)
 
-response = requests.post('https://api.openai.com/v1/chat/completions', data=json.dumps(data), headers=headers)
+response = requests.post('https://api.openai.com/v1/chat/completions', data=json.dumps(data), headers=headers).json()
 
-print(response.choices[0].message.content)
+print(response['choices'][0]['message']['content'])
