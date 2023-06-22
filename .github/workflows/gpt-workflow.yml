@@ -21,4 +21,4 @@ jobs:
           arguments: build
       - uses: kceb/pull-request-url-action@v1
         id: pr-url
-      - run: python3 script/python/GptInteraction.py "${{ steps.pr-url.outputs.url }}"
+      - run: python3 script/python/GptInteraction.py "${{ steps.pr-url.outputs.url }}" "${{ secrets.ISS_GPT_KEY }}"
