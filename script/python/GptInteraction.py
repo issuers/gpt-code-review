@@ -22,6 +22,7 @@ prompt = 'your task is:' \
          + patch_file.text
 data = {
     'model': 'gpt-3.5-turbo-16k-0613',
+    'temperature': 0.1,
     'messages': [
         {
             'role': 'system',
@@ -33,9 +34,6 @@ data = {
         }
     ]
 }
-
-print(headers)
-print(data)
 
 response = requests.post('https://api.openai.com/v1/chat/completions', data=json.dumps(data), headers=headers).json()
 
