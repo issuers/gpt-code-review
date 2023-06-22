@@ -2,7 +2,7 @@ import sys
 import requests
 import json
 
-PR_URL=sys.argv[1]
+PR_URL=sys.argv[1].rstrip()
 
 patch_file = requests.get(PR_URL + ".patch")
 api_token = sys.argv[2]
@@ -22,6 +22,7 @@ prompt = 'your task is:' \
          + patch_file.text
 data = {
     'model': 'gpt-3.5-turbo-16k-0613',
+    'temperature': 0.1,
     'messages': [
         {
             'role': 'system',
@@ -33,4 +34,7 @@ data = {
         }
     ]
 }
-response = requests.post('https://api.openai.com/v1/chat/completions', data=json.dumps(data), headers=headers)
+
+response = requests.post('https://api.openai.com/v1/chat/completions', data=json.dumps(data), headers=headers).json()
+
+print(response['choices'][0]['message']['content'])
