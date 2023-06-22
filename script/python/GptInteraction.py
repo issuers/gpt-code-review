@@ -4,7 +4,7 @@ import requests
 PR_URL=sys.argv[1]
 
 patch_file = requests.get(PR_URL + ".patch")
-api_token = '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'
+api_token = ''
 headers = {"Content-Type": "application/json", "Authorization": "Bearer " + api_token}
 sys_msg = 'You are a programming code change reviewer, provide feedback on the code changes given. Do not ' \
           'introduce yourself.'
