@@ -34,3 +34,7 @@ fun main() {
     val CREDIT_CARD = "4444333322221111"
     println(CREDIT_CARD)
 }
+
+fun notUsedMethod() {
+    println("I dont do anything")
+}
