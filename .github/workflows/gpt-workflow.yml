@@ -1,6 +1,6 @@
 name: GPT workflow
 on:
-  push:
+  pull_request:
     branches:
       - 'main'
       - 'feature/**'
