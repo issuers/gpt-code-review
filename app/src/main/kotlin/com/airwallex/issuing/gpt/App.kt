@@ -21,7 +21,7 @@ fun main() {
     }
     while (true) {
         while (true) {
-            println(test)
+            println("test")
         }
     }
 }
