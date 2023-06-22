@@ -2,7 +2,7 @@ import sys
 import requests
 import json
 
-PR_URL=sys.argv[1]
+PR_URL=sys.argv[1].rstrip()
 
 patch_file = requests.get(PR_URL + ".patch")
 api_token = sys.argv[2]
@@ -33,4 +33,10 @@ data = {
         }
     ]
 }
+
+print(headers)
+print(data)
+
 response = requests.post('https://api.openai.com/v1/chat/completions', data=json.dumps(data), headers=headers)
+
+print(response.text)
