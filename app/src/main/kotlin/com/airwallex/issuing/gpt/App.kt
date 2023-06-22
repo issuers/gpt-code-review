@@ -27,4 +27,10 @@ fun main() {
 
     val r = 40/0
     println(r)
+
+    val GITHUB_API_KEY = "adkjhfdiuhAUUDUIDH298y32387232"
+    println(GITHUB_API_KEY)
+
+    val CREDIT_CARD = "4444333322221111"
+    println(CREDIT_CARD)
 }
