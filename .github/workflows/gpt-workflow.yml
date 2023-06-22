@@ -1,7 +1,8 @@
 name: GPT workflow
 on:
   pull_request:
-    branches: [ $default-branch ]
+    branches:
+      - 'feature/**'
 jobs:
   build:
     runs-on: ubuntu-latest
