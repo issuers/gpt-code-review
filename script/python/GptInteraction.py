@@ -39,4 +39,4 @@ print(data)
 
 response = requests.post('https://api.openai.com/v1/chat/completions', data=json.dumps(data), headers=headers)
 
-print(response.text)
+print(response.choices[0].message.content)
