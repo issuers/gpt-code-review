@@ -11,8 +11,12 @@ sys_msg = 'You are a programming code change reviewer, provide feedback on the c
           'introduce yourself.'
 prompt = 'your task is:' \
          '- Review the code changes and provide feedback.' \
+         '- Write some summary for the complex functions' \
          '- If there are any bugs, highlight them.' \
          '- Provide details on missed use of best-practices.' \
+         '- Check if there is any debug print should be removed' \
+         '- Check if there any infinite loop' \
+         '- Check if there any unreachable code' \
          '- Does the code do what it says in the commit messages?' \
          '- Do not highlight minor issues and nitpicks.' \
          '- Use bullet points if you have multiple comments.' \

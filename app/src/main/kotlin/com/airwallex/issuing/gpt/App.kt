@@ -25,6 +25,8 @@ fun main() {
         }
     }
 
+
+
     val r = 40/0
     println(r)
 
