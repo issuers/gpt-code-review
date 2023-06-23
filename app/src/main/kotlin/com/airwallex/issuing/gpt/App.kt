@@ -12,7 +12,3 @@ class App {
 
 fun main() {
 }
-
-fun notUsedMethod() {
-    println("I dont do anything")
-}
