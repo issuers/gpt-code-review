@@ -55,4 +55,14 @@ class CreditCardNumberGenerator {
         val mod = sum % 10
         return if (mod == 0) 0 else 10 - mod
     }
+
+    fun removeDuplicatedItems(items: List<String>): List<String> {
+        val a = mutableListOf<String>()
+        for (item in items) {
+            if (!items.contains(item))  {
+                a.add(item)
+            }
+        }
+        return items
+    }
 }
