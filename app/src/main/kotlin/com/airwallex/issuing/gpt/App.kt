@@ -11,5 +11,4 @@ class App {
 }
 
 fun main() {
-    println(App().greeting)
 }
