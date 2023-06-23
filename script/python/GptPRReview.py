@@ -18,6 +18,8 @@ prompt = 'your task is:' \
          '- Check if there is any debug print should be removed' \
          '- Check if there any infinite loop' \
          '- Check if there any unreachable code' \
+         '- Check any sql injection bugs.' \
+         '- Check any divide by 0.' \
          '- Does the code do what it says in the commit messages?' \
          '- Do not highlight minor issues and nitpicks.' \
          '- Use bullet points if you have multiple comments.' \
