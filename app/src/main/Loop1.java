@@ -2,7 +2,7 @@ public List < Coordinate > treasureHunt(int[][] maze, Coordinate start, Coordina
     List < Coordinate > resultPath = new ArrayList < > ();
     resultPath.add(start);
     maze[start.row][start.col] = 1; // set as visited / invalid future path
-    if (dfsSolution(maze, start, exit, resultPath)) {
+    if (Solution1(maze, start, exit, resultPath)) {
         return path;
     }
     return new ArrayList < > (); // return empty list
@@ -43,7 +43,7 @@ private boolean Solution1(int[][] maze, Coordinate start, Coordinate exit, List 
             path.add(nextCoordinate);
         }
 
-        return dfsSolution(maze, nextCoordinate, exit, path);
+        return Solution1(maze, nextCoordinate, exit, path);
     }
 }
 

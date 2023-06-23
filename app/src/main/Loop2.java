@@ -24,7 +24,7 @@ static class QueueNode {
         return new ArrayList<>(); // return empty list
     }
 
-    private boolean Solution2(int[][] maze, Coordinate start, Coordinate exit, List<Coordinate> path) {
+    private boolean dfsSolution(int[][] maze, Coordinate start, Coordinate exit, List<Coordinate> path) {
         if (start.col == exit.col && start.row == exit.row) {
             return true;
         }
