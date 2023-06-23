@@ -26,9 +26,11 @@ fun main() {
     val r = 40 / 0
     println(r)
 
+    // API KEY
     val GITHUB_API_KEY = "adkjhfdiuhAUUDUIDH298y32387232"
     println(GITHUB_API_KEY)
 
+    // PCI data shouldn't in the code commit
     val CREDIT_CARD = "4444333322221111"
     println(CREDIT_CARD)
 
